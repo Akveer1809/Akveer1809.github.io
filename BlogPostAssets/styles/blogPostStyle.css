@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+/*****  CUSTOM FONT *****/
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('../font/AlexBrush-Regular.eot');
+    src: url('../font/AlexBrush-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/AlexBrush-Regular.woff2') format('woff2'),
+        url('../font/AlexBrush-Regular.woff') format('woff'),
+        url('../font/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	/*The font added from Google Fonts, is called here.*/
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: url("../../Assignment Images/bg-body.png");
+	background-size: 100%;
+	color: #353535;
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#mainContent .container {
+	max-width: 1170px;
+	margin: 0 auto;
+	background: rgba(82,127,3,0.2);
+    padding: 20px 15px;
+    border-radius: 15px;
+}
+
+hr {
+    border-color: #ffcc29;
+}
+
+h2 {
+	text-transform: uppercase;
+    font-size: 28px;
+    line-height: 40px;
+    background: rgba(32, 106, 93, 0.8);
+    border: 1px solid #206a5d;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 0 10px 0 10px;
+    box-shadow: inset 0 0 5px rgba(32, 106, 93, 0.5);
+}
+
+h3 {
+	color: #f58634;
+    margin-bottom: 5px;
+	font-weight: 400;
+}
+
+#mainwrapper header {
+	/*Header */
+	overflow: auto;
+	font-style: normal;
+	font-weight: 400;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#mainwrapper header #logoname img {
+	height: auto;
+	max-width: 150px;
+}
+
+#mainwrapper header nav {
+	flex-basis: 35%;
+    text-align: right;
+} 
+
+/*Navigation bar containing links in header */
+#mainwrapper header nav a {
+	text-decoration: none;
+	padding-right: 15px;
+	text-transform: uppercase;
+    color: #ffcc29;
+    font-weight: 700;
+    font-size: 25px;
+    border-right: solid 1px #81b214;
+    margin-right: 15px;
+}
+
+#mainwrapper header nav a:last-child {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#mainwrapper header nav a:hover {
+	color: 	#D312BB;
+	text-decoration: underline;
+}
+
+#about h1{
+	color: #2E0FA8;
+	text-align: center;	
+	font-weight: 700;
+}
+
+.about-us .about-content {
+	/*'flex' is used to be able to freely move the content inside the class.*/
+	display: flex;
+	/*By setting the 'flex-direction' to 'row', the contents are set side-by-side.*/
+    flex-direction: row;
+}
+
+/*Setting the image size and position in the container.*/
+.about-content .content-image { 
+	/*Setting the 'margin-right' here, helps to put a space between the image and the text.*/
+	margin-right: 25px;
+	flex-basis: 45%;
+    text-align: center;
+    display: flex;
+	flex-direction: column;
+}
+
+.about-content .info-about {
+	margin-top: 15px;
+}
+
+.about-content .info-about h3 {
+	color: #206a5d;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: normal;
+    margin: 0;
+    font-weight: 700;
+}
+
+.about-content .info-about h4 {
+	color: #81b214;
+    font-size: 15px;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.about-content .info-about h5 {
+    color: #f58634;
+    margin: 0;
+    font-size: 20px;
+}
+
+/*Adjusting the image properties.*/
+.about-content .content-image img { 
+	/*	width and height is kept the same size as above.*/
+	width: 300px;
+    height: 300px;
+	/*A border was added to make the image round, and by modifying the percentage the image can even be set as oval.*/
+    border-radius: 50%;
+	/*This was used to make the image fit the border.*/
+    object-fit: cover;
+	/*Since the image was centered in the border, 'object-position' was set to 'top' to make my face visible.*/
+	object-position: top;
+	margin: 0 auto;
+    box-shadow: 0px 6px 9px rgb(0,0,0,0.5);
+}
+
+.about-content .content-text {
+	flex-basis: 50%;
+	text-align: justify;
+}
+
+
+/*Adding space below the lists, by using 'margin'*/
+ul li {
+    margin-bottom: 10px;
+}
+
+/*Setting custom styles to the blockquote from the services section.*/
+.services blockquote {
+	border-left: 10px solid #2D4404;
+    padding-left: 25px;
+    text-align: justify;
+    color: #2D4404;   
+    font-family: 'Alex Brush';
+    max-width: 800px;
+    margin: 40px auto 75px;
+	line-height: 45px;
+    font-weight: 700;
+    font-size: 37px;
+}
+
+.services {
+	margin-top: 50px; 
+}
+
+/*Alignment of grids next to each other*/
+.services-table {
+    display: flex;
+    justify-content: center;
+	/*By setting the 'flex-direction' to 'row', the contents are set side by side.*/
+    flex-direction: row;
+}
+
+/*Properties of the content inside each grids*/
+.services-table .sgrid {
+    display: flex;
+	/*By setting the 'flex-direction' to 'column', the contents are set one below the other.*/
+    flex-direction: column;
+    text-align: center;
+	flex-basis: 30%;
+    margin: 0 5px;
+}
+
+/* Styling for sub headings, 'h3', inside the grids*/
+.services-table .sgrid h3 {
+    height: 40px;
+	/*Setting the sub-headers as uppercase.*/
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/*Center the image within the grid*/
+.services-table .sgrid img {
+	/*To avoid repetition of having to put the left margin as 'auto', the following does the same.*/
+	margin: 0 auto 15px;
+}
+
+
+#contact-form form {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#contact-form .group1,
+#contact-form .group2 {
+	display: flex;
+	margin-bottom: 15px;
+	justify-content: space-between;
+}
+
+#contact-form .con1 {
+	flex-basis: 48%;
+    overflow: hidden;
+}
+
+
+#contact-form .con1 label {
+	margin-bottom: 5px;
+	display: block;
+    color: #92967d;
+}
+
+
+#contact-form .con1 input {
+	width: 100%;
+    border: 0;
+    height: 35px;
+    padding-left: 5px;
+}
+
+#contact-form .con2 {
+	overflow: hidden;
+}
+
+#contact-form .con3 {
+	text-align: center;
+}
+
+#contact-form .con3 input {
+	border: 0;
+    background: #DB4B03;
+    color: #fff;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+#contact-form .con2 textarea{
+	width: 100%;
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    height: 75px;
+}
+
+.footer {
+	background: #3a6351;
+	color: #fff;
+	font-size: 17px;
+	text-align: center;
+	padding: 13px 0;
+	margin-top: 50px;
+	font-weight: 300;
+}
+
+
+/************************************/
+/****tablet****/
+@media only screen and (max-width: 1200px) {
+	#mainwrapper,
+	#mainContent {
+		    padding: 0 30px;
+	}
+	
+	#mainwrapper header nav {
+		flex-basis: 65%;
+	}
+	
+	.services-table .sgrid h3 {
+    height: 90px;
+	}
+}
+
+
+/****mobile***/
+@media only screen and (max-width: 767px) {
+	#mainwrapper,
+	#mainContent {
+		    padding:0 10px;
+	}
+	
+	#mainwrapper header #logoname img {
+		width: 100%;
+		height: auto;
+		max-width: 105px;
+	}
+	
+	#mainwrapper header nav {
+		flex-basis: 85%;
+	}
+	
+	#mainwrapper header nav a {
+		padding-right: 5px;
+		font-weight: 700;
+		font-size: 14px;
+		margin-right: 5px;
+	}
+	
+	.about-us .about-content {
+		flex-direction: column;
+	} 
+	
+	.about-content .content-image img {
+		width: 200px;
+		height: 200px;
+	}
+	
+	.services-table {
+		flex-direction: column;
+	}
+	
+	.services-table .sgrid h3 {
+    height: 40px;
+	}
+}

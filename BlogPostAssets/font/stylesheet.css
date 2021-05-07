@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('../font/AlexBrush-Regular.eot');
+    src: url('../font/AlexBrush-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/AlexBrush-Regular.woff2') format('woff2'),
+        url('../font/AlexBrush-Regular.woff') format('woff'),
+        url('../font/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
